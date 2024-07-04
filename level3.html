@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Pets: Fold and Discover!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        header {
+            background-color: #587e60;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img {
+            width: 90px;
+            height: auto;
+        }
+        .buttons {
+            display: flex;
+        }
+        .buttons a {
+            background-color: #8bb174;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+        .buttons a:hover {
+            background-color: #4e8f56;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Century Gothic', sans-serif;
+            color: black;
+            font-size: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .activity {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .activity h2 {
+            color: #899;
+            text-align: center;
+            margin-top: 40px; /* Separate each animal section */
+        }
+        .activity img {
+            display: block;
+            margin: 10px auto; /* Center the image horizontally and add space above and below */
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            background-color: #587e60;
+            color: #fff;
+            padding: 10px 0;
+            clear: both;
+        }
+        .level-button, .activity-button {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #8bb174;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+        .level-button:hover, .activity-button:hover {
+            background-color: #4e8f56;
+        }
+        /* Custom Scroll Bar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f4f4f4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #8bb174;
+            border-radius: 20px;
+            border: 2px solid #f4f4f4;
+        }
+        /* Header image style */
+        .header-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 5px;
+            margin: 0 auto 20px; /* Center and add space below */
+            display: block;
+        }
+        /* Level header style */
+        .level-header {
+            text-align: center;
+            font-family: 'Century Gothic', sans-serif;
+            color: black;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        /* Space below the buttons */
+        .space-below {
+            margin-bottom: 100px; /* Adjust as needed for spacing */
+        }
+        /* Navigation Buttons */
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 100px; /* Adjust as needed for spacing below buttons */
+        }
+        .button-container a {
+            background-color: #8bb174;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+        .button-container a:hover {
+            background-color: #4e8f56;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="image/logo.jpg" alt="Logo">
+        </a>
+    </div>
+    <nav class="buttons">
+        <a href="index.html">HOME</a>
+        <a href="activities.html">ACTIVITY</a>
+        <a href="media.html">MEDIA</a>
+        <a href="quiz.html">QUIZ</a>
+        <a href="aboutus.html">ABOUT US</a>
+    </nav>
+</header>
+<div class="container">
+    <h1>Paper Pets: Fold and Discover!</h1>
+
+    <!-- Level 1 Header Image -->
+    <div class="level-header">
+        <img src="image/level3frog.png" alt="Level 1 Header Image">
+    </div>
+
+    <div class="activity">
+        <p>Step by step to do an origami of a Jumping Frog!</p>
+		<img src="image/jumpingfrog_step1.jpg" alt="Step 1" style="max-width:170px;">
+        <p><b>1. Start with the Paper:</b> Start with a square piece of paper. Fold it in half vertically and crease well, then unfold.</p>
+        <img src="image/jumpingfrog_step2.jpg" alt="Step 2" style="max-width:170px;">
+        <p><b>2. Fold Vertically:</b> Fold the paper in half vertically again, but this time do not unfold.</p>
+        <img src="image/jumpingfrog_step3.jpg" alt="Step 3"style="max-width:170px;">
+        <p><b>3. Fold Again:</b> Fold the top left and right corners down to the center line to form a triangle at the top.</p>
+        <img src="image/jumpingfrog_step4.jpg" alt="Step 4"style="max-width:170px;">
+        <p><b>4. Fold to form a top triangle:</b> Fold the top triangle flap down along the center crease.</p>
+        <img src="image/jumpingfrog_step5.jpg" alt="Step 5"style="max-width:170px;">
+        <p><b>5. Unfold the top Flap:</b> Unfold the top flap and squash fold the sides, pushing them inwards to form a diamond shape at the top.</p>
+        <img src="image/jumpingfrog_step6.jpg" alt="Step 6"style="max-width:170px;">
+        <p><b>6. Fold the Bottom Edge of the Paper:</b> Fold the bottom edge of the paper up to meet the bottom of the diamond shape. Crease well.</p>
+        <img src="image/jumpingfrog_step7.jpg" alt="Step 7"style="max-width:170px;">
+        <p><b>7. Fold the top flap down:</b> Fold the top flap down over the bottom section, making a straight horizontal fold.</p>
+        <img src="image/jumpingfrog_step8.jpg" alt="Step 8"style="max-width:170px;">
+        <p><b>8. Fold the bottom corners Diagonally:</b> Fold the bottom corners up diagonally to the center line, creating two small triangles at the bottom.</p>
+         <img src="image/jumpingfrog_step10.jpg" alt="Step 9"style="max-width:170px;">
+        <p><b>9. Fold to shape a rectangular Fold:</b> Fold the bottom edge up to the center line again, creating a rectangular fold at the bottom.</p>
+       <img src="image/jumpingfrog_step9.jpg" alt="Step 10"style="max-width:170px;">
+        <p><b>10. Fold the small bottom triangles:</b> Fold the small bottom triangles outward to form the frog’s back legs.</p>
+        <img src="image/jumpingfrog_step11.jpg" alt="Step 11"style="max-width:170px;">
+        <p><b>11. Fold the entire model Verically:</b> Fold the entire model in half vertically, bringing the bottom edge up to meet the top edge.</p>
+		<img src="image/jumpingfrog_step12.jpg" alt="Step 12"style="max-width:170px;">
+		<p><b>12. Fold the top corners:</b> Fold the top corners down to meet the center line, creating a point at the top.</p>
+		<img src="image/jumpingfrog_step13.jpg" alt="Step 13"style="max-width:170px;">
+		<p><b>13. Fold the bottom corners to create the legs:</b> Fold the bottom corners outward to form the frog’s front legs.</p>
+		<img src="image/jumpingfrog_step14.jpg" alt="Step 14"style="max-width:170px;">
+		<p><b>14. Completion of the jumping frog:</b> Your origami jumping frog is complete! Press down on the back edge and release to make the frog jump.</p>
+        
+    </div>
+</div>
+<div class="button-container">
+    <a href="level2.html" class="activity-button">Previous Level: Level 2</a>
+    <a href="activities.html" class="activity-button">Back to Activity Page</a>
+</div>
+
+<footer>
+    <p>© 2024 Paper Pets. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

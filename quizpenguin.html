@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penguin Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body takes up at least the full height of the viewport */
+        }
+        .container {
+            max-width: 900px; /* Increase max-width for a wider container */
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        h1 {
+            font-family: 'Century Gothic', sans-serif;
+            color: black;
+            text-align: center;
+        }
+        .question-section {
+            margin-top: 20px;
+        }
+        .question {
+            font-weight: bold;
+        }
+        .answers {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        .answers label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center; /* Center buttons horizontally */
+            margin-top: 20px; /* Add space above buttons */
+        }
+        .buttons-bottom {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding: 20px 40px; /* Increase vertical padding for more separation */
+        }
+        .buttons-bottom button {
+            padding: 10px 20px;
+            background-color: #8bb174;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .buttons-bottom button:hover {
+            background-color: #4e8f56;
+        }
+        .buttons-bottom button:not(:last-child) {
+            margin-right: 10px; /* Adjust margin-right to create space between buttons */
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        footer {
+            text-align: center;
+            background-color: #587e60;
+            color: #fff;
+            padding: 10px 0;
+            width: 100%;
+            position: relative; /* Change position to relative */
+            bottom: 0;
+            clear: both; /* Clear any floats */
+        }
+        /* Navigation Buttons */
+        header {
+            background-color: #587e60;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img {
+            width: 90px;
+            height: auto;
+        }
+        .buttons {
+            display: flex;
+        }
+        .buttons a {
+            background-color: #8bb174;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+        .buttons a:hover {
+            background-color: #4e8f56;
+        }
+        h1 {
+            font-family: 'Century Gothic', sans-serif;
+            color: black;
+            font-size: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+   /* Custom Scroll Bar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f4f4f4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #8bb174;
+            border-radius: 20px;
+            border: 2px solid #f4f4f4;
+        }
+
+    </style>
+    <script>
+        function checkAnswers() {
+            const answers = {
+                q1: 'A',
+                q2: 'D',
+                q3: 'A',
+                q4: 'C'
+            };
+            let score = 0;
+            for (const [key, value] of Object.entries(answers)) {
+                const selected = document.querySelector(`input[name="${key}"]:checked`);
+                if (selected && selected.value === value) {
+                    score++;
+                }
+            }
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `You got ${score} out of 4 correct.`;
+            document.getElementById('submit-btn').style.display = 'none';
+            document.getElementById('retry-btn').style.display = 'block';
+        }
+
+        function retryQuiz() {
+            const radios = document.querySelectorAll('input[type="radio"]');
+            radios.forEach(radio => {
+                radio.checked = false;
+            });
+            document.getElementById('result').innerHTML = '';
+            document.getElementById('submit-btn').style.display = 'block';
+            document.getElementById('retry-btn').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="image/logo.jpg" alt="Logo">
+        </a>
+    </div>
+    <nav class="buttons">
+        <a href="index.html">HOME</a>
+        <a href="activities.html">ACTIVITY</a>
+        <a href="media.html">MEDIA</a>
+        <a href="quiz.html">QUIZ</a>
+        <a href="aboutus.html">ABOUT US</a>
+    </nav>
+</header>
+
+<div class="container">
+    <!-- Level header and title -->
+    <h1>Penguin Quiz</h1>
+
+    <div class="question-section">
+        <!-- Questions and answers -->
+        <p class="question">Question 1: What adaptation allows penguins to be practically impermeable to water?</p>
+        <div class="answers">
+            <label><input type="radio" name="q1" value="A"> A) Dense feathers</label>
+            <label><input type="radio" name="q1" value="B"> B) Specialized glands</label>
+            <label><input type="radio" name="q1" value="C"> C) Low heart rate</label>
+            <label><input type="radio" name="q1" value="D"> D) Increased blood oxygen storage</label>
+        </div>
+
+        <p class="question">Question 2: Why are penguins considered monogamous?</p>
+        <div class="answers">
+            <label><input type="radio" name="q2" value="A"> A) They mate for life and maintain stable pairs during the reproductive season</label>
+            <label><input type="radio" name="q2" value="B"> B) They form large colonies for nesting and feeding</label>
+            <label><input type="radio" name="q2" value="C"> C) They have dense feathers that make them impermeable to water</label>
+            <label><input type="radio" name="q2" value="D"> D) They consume a diet primarily consisting of fish and marine animals</label>
+        </div>
+
+        <p class="question">Question 3: What color are swans typically?</p>
+        <div class="answers">
+            <label><input type="radio" name="q3" value="A"> A) White</label>
+            <label><input type="radio" name="q3" value="B"> B) Black</label>
+            <label><input type="radio" name="q3" value="C"> C) Grey</label>
+            <label><input type="radio" name="q3" value="D"> D) Brown</label>
+        </div>
+
+        <p class="question">Question 4: What is a notable characteristic of penguin colonies?</p>
+        <div class="answers">
+            <label><input type="radio" name="q4" value="A"> A) They hunt in groups for fish and marine animals</label>
+            <label><input type="radio" name="q4" value="B"> B) They consume a diet mainly consisting of squid and krill</label>
+            <label><input type="radio" name="q4" value="C"> C) They form large colonies for nesting and social interaction</label>
+            <label><input type="radio" name="q4" value="D"> D) They can dive to depths of up to 500 meters</label>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <!-- Buttons for submitting, retrying, and navigating -->
+        <button id="submit-btn" onclick="checkAnswers()">Submit</button>
+        <button id="retry-btn" onclick="retryQuiz()" style="display:none;">Try Again</button>
+    </div>
+    <div class="result" id="result"></div>
+    <div class="buttons-bottom">
+        <button onclick="location.href='quizswan.html'">Previous Animal</button>
+        <button onclick="location.href='quiz1.html'">Back to Animal Selection</button>
+        <button onclick="location.href='quizturtle.html'">Next Animal</button>
+    </div>
+</div>
+
+<footer>
+    <p>© 2024 Paper Pets. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

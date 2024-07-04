@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Pets: Media</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        header {
+            background-color: #587e60;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img {
+            width: 90px;
+            height: auto;
+        }
+        .buttons {
+            display: flex;
+        }
+        .buttons a {
+            background-color: #8bb174;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+        .buttons a:hover {
+            background-color: #4e8f56;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .image {
+            margin-bottom: 20px;
+        }
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+        .media-section {
+            margin-bottom: 20px;
+            text-align: center; /* Centered headings and text */
+        }
+        .media-section h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .media-section p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .videos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .video-box {
+            width: calc(33.33% - 20px);
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .video-box:hover {
+            transform: scale(1.05);
+        }
+        .video-box video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .video-box h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .video-box p {
+            text-align: center; /* Centered captions */
+            color: #555;
+            margin: 10px 0 0 0;
+        }
+        .video-box a {
+            display: inline-block;
+            background-color: #8bb174;
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .video-box a:hover {
+            background-color: #4e8f56;
+        }
+        footer {
+            text-align: center;
+            background-color: #587e60;
+            color: #fff;
+            padding: 10px 0;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+        /* Custom Scroll Bar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f4f4f4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #8bb174;
+            border-radius: 20px;
+            border: 2px solid #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="image/logo.jpg" alt="Logo">
+        </a>
+    </div>
+    <nav class="buttons">
+        <a href="index.html">HOME</a>
+        <a href="activities.html">ACTIVITY</a>
+        <a href="media.html">MEDIA</a>
+        <a href="quiz.html">QUIZ</a>
+        <a href="aboutus.html">ABOUT US</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="image">
+        <img src="image/mediaheader.png" alt="Media Image">
+    </div>
+
+    <div class="media-section">
+
+        <p>Want to learn about the animals you are crafting with origami? Watch these fun and educational videos to discover amazing facts about each animal. Enjoy and get inspired!</p>
+        <div class="videos">
+            <div class="video-box">
+                <h3>Fox</h3>
+                <video controls>
+                    <source src="video/fox.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Foxes are solitary animals, they hunt and sleep alone, except when raising their pups.</p>
+                <a href="https://youtu.be/6RKQAu28W4A?si=NdPggtTVgIMjOVCn" target="_blank">Watch Original Video</a>
+            </div>
+            <div class="video-box">
+                <h3>Swan</h3>
+                <video controls>
+                    <source src="video/swan.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Swans are known for their grace and beauty, and they often mate for life.</p>
+                <a href="https://youtu.be/AA7Ufr5QWrE?si=z20SqUGG7MLNeQmR" target="_blank">Watch Original Video</a>
+            </div>
+            <div class="video-box">
+                <h3>Penguin</h3>
+                <video controls>
+                    <source src="video/penguin.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Penguins are flightless birds that are excellent swimmers, they can dive to great depths.</p>
+                <a href="https://youtu.be/sfFJAoabtQA?si=UeKtBYkwypcPG1u6" target="_blank">Watch Original Video</a>
+            </div>
+            <div class="video-box">
+                <h3>Turtle</h3>
+                <video controls>
+                    <source src="video/turtle.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Turtles have been around for over 200 million years, making them some of the oldest reptiles in the world.</p>
+                <a href="https://youtu.be/y6MoRDh5mAo?si=ofJyfmwh3EOL8Cw8" target="_blank">Watch Original Video</a>
+            </div>
+            <div class="video-box">
+                <h3>Jumping Frog</h3>
+                <video controls>
+                    <source src="video/frog.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Some species of frogs can jump over 20 times their body length in a single leap.</p>
+                <a href="https://youtu.be/g9RkRyvjF2s?si=Ua9S8FpDsMo9TnIi" target="_blank">Watch Original Video</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Group 1. Paper Pets. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

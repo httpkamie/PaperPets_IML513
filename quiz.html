@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Pets: Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        header {
+            background-color: #587e60;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img {
+            width: 90px;
+            height: auto;
+        }
+        .buttons {
+            display: flex;
+        }
+        .buttons a {
+            background-color: #8bb174;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+        .buttons a:hover {
+            background-color: #4e8f56;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            min-height: calc(100vh - 120px); /* Ensure container takes up at least the viewport height minus header and footer heights */
+        }
+        h1 {
+            font-family: 'Century Gothic', sans-serif;
+            color: black;
+            font-size: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .level-header img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin: 0 auto 20px; /* Center and add space below */
+            display: block;
+        }
+        .quiz-section-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .quiz-section {
+            width: 250px; /* Adjust the width as needed */
+            height: 200px; /* Adjust the height as needed */
+            padding: 20px;
+            border: 2px solid #8bb174;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .quiz-section:hover {
+            background-color: #e6f2e1;
+        }
+        .quiz-section h2 {
+            color: #587e60;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            background-color: #587e60;
+            color: #fff;
+            padding: 10px 0;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+        .space-below {
+            margin-bottom: 100px; /* Adjust as needed for spacing */
+        }
+        /* Custom Scroll Bar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f4f4f4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #8bb174;
+            border-radius: 20px;
+            border: 2px solid #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="image/logo.jpg" alt="Logo">
+        </a>
+    </div>
+    <nav class="buttons">
+        <a href="index.html">HOME</a>
+        <a href="activities.html">ACTIVITY</a>
+        <a href="media.html">MEDIA</a>
+        <a href="quiz.html">QUIZ</a>
+        <a href="aboutus.html">ABOUT US</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- Level 1 Header Image -->
+    <div class="level-header">
+        <img src="image/headerquiz.png" alt="Level 1 Header Image">
+    </div>
+
+    <h1>Paper Pets: Quiz</h1>
+
+    <div class="quiz-section-container">
+        <div class="quiz-section" onclick="location.href='quiz1.html'">
+            <h2>Animal Facts</h2>
+            <p>Test your knowledge about different animals!</p>
+        </div>
+
+        <div class="quiz-section" onclick="location.href='quizorigami.html'">
+            <h2>Origami Steps</h2>
+            <p>How well do you know the steps to create origami figures?</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Group 1. Paper Pets. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
